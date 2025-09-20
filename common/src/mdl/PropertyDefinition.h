@@ -111,7 +111,7 @@ template <typename T>
 struct ColorT
 {
   std::array<T, 3> components;
-  kdl_reflect_decl(ColorT, components);
+  kdl_reflect_decl(ColorT<T>, components);
 };
 
 template <typename T>
@@ -119,7 +119,7 @@ struct ColorWithBrightnessT
 {
   ColorT<T> color;
   float brightness;
-  kdl_reflect_decl(ColorWithBrightnessT, color, brightness);
+  kdl_reflect_decl(ColorWithBrightnessT<T>, color, brightness);
 };
 
 using Color3f = ColorT<float>;
